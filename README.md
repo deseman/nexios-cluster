@@ -54,23 +54,16 @@ Portforwarding
 sudo kubefwd services
 ```
 
-## Generate SSL key
-
-```bash
-openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=tasks.default.svc.cluster.local' \
-  -keyout localhost-privkey.pem -out localhost-cert.pem
-```
-
 ## Docker commands
 
-configure docker for minikube `eval $(minikube --profile nexios docker-env)`
-build frontend image `docker build -t mvermeulen/frontend:0.0.10 .`
-build task-service image `docker build -t mvermeulen/task-service:0.0.4 .`
-start frontend `docker run -p 8080:8080 mvermeulen/frontend:0.0.10`
-start task-service `docker run -p 8001:8001 mvermeulen/task-service:0.0.4`
-ssh into container `docker exec -it <container id> /bin/bash`
+- configure docker for minikube `eval $(minikube --profile nexios docker-env)`
+- build frontend image `docker build -t mvermeulen/frontend:0.0.10 .`
+- build task-service image `docker build -t mvermeulen/task-service:0.0.4 .`
+- start frontend `docker run -p 8080:8080 mvermeulen/frontend:0.0.10`
+- start task-service `docker run -p 8001:8001 mvermeulen/task-service:0.0.4`
+- ssh into container `docker exec -it <container id> /bin/bash`
 
 ## Skaffold commands
 
-Treat any context as local `skaffold config set --kube-context nexios local-cluster true`
-Set the default repo `skaffold config set default-repo <myrepo>`
+- Treat any context as local `skaffold config set --kube-context nexios local-cluster true`
+- Set the default repo `skaffold config set default-repo <myrepo>`
