@@ -1,0 +1,17 @@
+{
+	"name": "nexios-tcp",
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"main": "tcp.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"console-stamp": "^0.2.7",
+		"uuid": "^3.3.2"
+	}
+}

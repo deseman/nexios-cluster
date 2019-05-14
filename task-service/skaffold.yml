@@ -1,0 +1,20 @@
+apiVersion: skaffold/v1beta10
+kind: Config
+build:
+  artifacts:
+    - image: mvermeulen/task-service
+      context: .
+      sync:
+        manual:
+          - src: '*.js'
+            dest: '.'
+      docker:
+        dockerfile: Dockerfile
+  local:
+    useDockerCLI: false
+    useBuildkit: false
+
+deploy:
+  kubectl:
+    manifests:
+      - 'deployment.yml'
