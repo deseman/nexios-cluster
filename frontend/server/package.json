@@ -13,6 +13,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"console-stamp": "^0.2.7",
-		"express": "^4.16.4"
+		"express": "^4.16.4",
+		"node-tcp": "git+https://github.com/deseman/node-tcp.git"
 	}
 }
